@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>QHLS Result Announcement</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .carousel-container {
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ISM QHLS Result</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		    .carousel-container {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       width: 100%;
       height: 40vh;
@@ -28,30 +34,48 @@
       z-index: 10;
     }
   </style>
-</head>
-<body class="relative bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 h-screen overflow-hidden">
+	</head>
+	<body >
 
-  <!-- Centered QHLS content -->
-  <div class="flex items-center justify-center h-screen px-4 z-10 relative">
-    <div class="bg-white shadow-xl rounded-2xl p-6 md:p-10 w-full max-w-2xl text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-purple-700 mb-4">📢 QHLS Result Announcement</h1>
-      <p class="text-lg md:text-xl text-gray-700">
-        <strong>QHLS Result</strong> will be published at 
-        <span class="text-purple-600 font-semibold">5 PM today</span>.
-        <br />
-        <span class="block mt-2 text-green-600 font-medium">In Sha Allah.</span>
-      </p>
-    </div>
-  </div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  <!-- Floating Bottom 30% Carousel -->
-  <div class="carousel-container">
-    <img src="isthiqama.jpeg" alt="Isthiqama" class="carousel-image active" />
-    <img src="inspire.jpeg" alt="Inspire" class="carousel-image" />
+				<!-- Header -->
+					<header id="header" class="alt main-header" style="display: flex; padding-top: 10px !important ;">
+						<span class="logo"><img width="80" src="logo.png" alt="" /></span>
+						<h1>QHLS EXAMINATION RESULT  2025</h1>
+					
+						
+					</header>
+
+				<div id="main" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding:8px ;">
+						<input type="text" id="roll-no" placeholder="Please enter the Register no or name" style="min-width: 300px; max-width: 400px; margin-top: 40px;"><br />
+						<a id="search"  class="button primary"> Submit</a>
+						<br>
+						<span id="no-res" style="color: red;" >Sorry no Result found</span>
+						
+						<div class="alert alert-success">
+							Hi <strong id="res-name"></strong>, your score is <strong id="res-mark"></strong>
+							<br />
+							<span id="final" >Congratulations - You are eligible for final examination</span>
+							<br><br>
+						<a id="reset"  class="button"> Close</a>
+						</div>
+						
+						<br>
+						<br>
+						<div id="mul-res"></div>
+					</div>
+					<div style="position: relative;">
+							  <div class="carousel-container">
+    <img src="is.jpg" alt="Isthiqama" class="carousel-image active" />
+    <img src="inspire.jpg" alt="Inspire" class="carousel-image" />
   </div>
   
-  <!-- Bottom 10% Blank -->
-  <div class="h-[10%]"></div>
+					</div>
+
+					
+
 
   <!-- Carousel Script -->
   <script>
@@ -65,5 +89,22 @@
     }, 3000);
   </script>
 
-</body>
+			
+
+				<!-- Footer -->
+					<footer id="footer" style="position: fixed; left: 50%; top: 50%; transform: translateX(0%) rotate(90deg); z-index: 2; color: #ccc; ">
+						
+						<p class="copyright">&copy;Design by: <a href="https://isminspire.com">ISM Inspire Ernakulam</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
