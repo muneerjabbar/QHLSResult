@@ -4177,3 +4177,14 @@ input, select, textarea {
 		}
 
 	}
+
+	.is-preload .logo img, .is-preload #banner  h1 {
+		transform: scale(5);
+		opacity: 0;
+	}
+	.logo img, #banner h1 {
+		transform: scale(1);
+		transition: .3s ease-in-out;
+		opacity: 1;
+	}
+	
