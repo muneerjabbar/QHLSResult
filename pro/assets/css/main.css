@@ -4187,4 +4187,16 @@ input, select, textarea {
 		transition: .3s ease-in-out;
 		opacity: 1;
 	}
+
+	.pro-iframe {
+		height: 600px;
+	}
+
+	@media screen and (max-width: 992px) {
+
+		.pro-iframe {
+		height: 300px;
+	}
+
+	}
 	
