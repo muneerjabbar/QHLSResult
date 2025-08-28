@@ -5,107 +5,159 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>ISM QHLS Result</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-		    .carousel-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40vh;
-      overflow: hidden;
-      z-index: 1;
-    }
-    .carousel-image {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .carousel-image.active {
-      opacity: 1;
-      z-index: 10;
-    }
-  </style>
-	</head>
-	<body >
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+	<title>ISM QHLS Result</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 20px;
+		}
 
-				<!-- Header -->
-					<header id="header" class="alt main-header" style="display: flex; padding-top: 10px !important ;">
-						<span class="logo"><img width="80" src="logo.png" alt="" /></span>
-						<h1>QHLS EXAMINATION RESULT  2025</h1>
-					
-						
-					</header>
+		#certificate {
+			position: relative;
+			width: 1000px;
+			/* adjust to match qhlscertificate.jpg width */
+			height: 700px;
+			/* adjust to match qhlscertificate.jpg height */
+			margin: 20px auto;
+			background: url('qhlscertificate.jpg') no-repeat center;
+			background-size: cover;
+		}
 
-				<div id="main" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding:8px ;">
-						<input type="text" id="roll-no" placeholder="Please enter the Register no or name" style="min-width: 300px; max-width: 400px; margin-top: 40px;"><br />
-						<a id="search"  class="button primary"> Submit</a>
-						<br>
-						<span id="no-res" style="color: red;" >Sorry no Result found</span>
-						
-						<div class="alert alert-success">
-							Hi <strong id="res-name"></strong>, your score is <strong id="res-mark"></strong>
-							<br />
-							<span id="final" >Congratulations - You are eligible for final examination</span>
-							<br><br>
-						<a id="reset"  class="button"> Close</a>
-						</div>
-						
-						<br>
-						<br>
-						<div id="mul-res"></div>
-					</div>
-					<div style="position: relative;">
-							  <div class="carousel-container">
-    <img src="is.jpg" alt="Isthiqama" class="carousel-image active" />
-    <img src="inspire.jpg" alt="Inspire" class="carousel-image" />
-	<img src="ekm.jpg" alt="Inspire" class="carousel-image" />
-  </div>
-  
-					</div>
+		#fullname {
+			position: absolute;
+			top: 43%;
+			/* adjust position for your template */
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 40px;
+			font-weight: bold;
+			color: #d4af37;
+			/* Golden color */
+			font-family: "Brush Script MT", cursive;
+		}
 
-					
+		#mark {
+			position: absolute;
+			top: 60%;
+			/* adjust position for your template */
+			left: 45%;
+			transform: translate(-50%, -50%);
+			font-size: 28px;
+			font-weight: bold;
+			color: #000;
+			font-family: "Times New Roman", serif;
+		}
+
+		#regno {
+			position: absolute;
+			top: 50%;
+			/* adjust position for your template */
+			left: 18%;
+			transform: translate(-50%, -50%);
+			font-size: 24px;
+			font-weight: bold;
+			color: #ff0000;
+			/* Red */
+			font-family: "Times New Roman", serif;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt main-header" style="display: flex; padding-top: 10px !important ;">
+			<span class="logo"><img width="80" src="logo.png" alt="" /></span>
+			<h1>QHLS FINAL EXAMINATION RESULT 2025</h1>
 
 
-  <!-- Carousel Script -->
-  <script>
-    const images = document.querySelectorAll('.carousel-image');
-    let current = 0;
+		</header>
 
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 3000);
-  </script>
+		<div id="main"
+			style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding:8px ;">
+			<input type="text" id="regInput" placeholder="Please enter the Register no "
+				style="min-width: 300px; max-width: 400px; margin-top: 40px;"><br />
+			<button class="button primary" onclick="downloadCertificate()">Download Certificate</button>
 
-			
-
-				<!-- Footer -->
-					<footer id="footer" style="position: fixed; left: 50%; top: 50%; transform: translateX(0%) rotate(90deg); z-index: 2; color: #ccc; ">
-						
-						<p class="copyright">&copy;Design by: <a href="https://isminspire.com">ISM Inspire Ernakulam</a>.</p>
-					</footer>
-
+			<div id="certificate" style="display:none;">
+				<div id="fullname"></div>
+				<div id="mark"></div>
+				<div id="regno"></div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script>
+				// 🔹 Candidate data directly embedded here
+				let candidates = [
+					{ regno: "11", fullname: "Muneer Jabbar", mark: "98" },
+					{ regno: "22", fullname: "Saliha", mark: "87" }
+				];
 
-	</body>
+				async function downloadCertificate() {
+					const regnoInput = document.getElementById("regInput").value.trim();
+					if (!regnoInput) {
+						alert("Please enter register number");
+						return;
+					}
+
+					// Find candidate by regno
+					const candidate = candidates.find(c => c.regno === regnoInput);
+					if (!candidate) {
+						alert("No candidate found with this register number");
+						return;
+					}
+
+					// Fill in certificate details
+					document.getElementById("fullname").textContent = candidate.fullname;
+					document.getElementById("mark").textContent = candidate.mark;
+					document.getElementById("regno").textContent = candidate.regno;
+
+					const certDiv = document.getElementById("certificate");
+					certDiv.style.display = "block";
+
+					// Convert to image
+					const canvas = await html2canvas(certDiv);
+					const link = document.createElement("a");
+					link.download = candidate.fullname.replace(/\s+/g, "_") + "_certificate.jpg";
+					link.href = canvas.toDataURL("image/jpeg");
+					link.click();
+
+					// Hide preview again
+					certDiv.style.display = "none";
+				}
+			</script>
+
+		</div>
+
+
+
+
+
+		<!-- Footer -->
+		<footer id="footer"
+			style="position: fixed; left: 50%; top: 50%; transform: translateX(0%) rotate(90deg); z-index: 2; color: #ccc; ">
+
+			<p class="copyright">&copy;Design by: <a href="https://isminspire.com">ISM Inspire Ernakulam</a>.</p>
+		</footer>
+
+	</div>
+
+			<!-- Scripts -->
+		
+			  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+
 </html>
