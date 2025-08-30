@@ -50,12 +50,13 @@
 		#regno {
 			position: absolute;
 			top: 50%;
-			left: 18%;
+			left: 24%;
 			transform: translate(-50%, -50%);
 			font-size: 24px;
 			font-weight: bold;
 			color: #ff0000;
 			font-family: "Times New Roman", serif;
+			justify-content: left;
 		}
 
 		/* 🔹 Autocomplete dropdown */
@@ -104,7 +105,7 @@
 			style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding:8px ;">
 			
 			<div style="position:relative; min-width:300px; max-width:400px; margin-top:40px;">
-				<input type="text" id="regInput" placeholder="Please enter the Register no " style="width:100%;">
+				<input type="text" id="regInput" placeholder="Please enter the Register no " style="width:100%; justify-content: left">
 				<div id="autocomplete-list" class="autocomplete-items"></div>
 			</div>
 			
@@ -625,24 +626,26 @@
 				const regInput = document.getElementById("regInput");
 				const listDiv = document.getElementById("autocomplete-list");
 
-				regInput.addEventListener("input", function () {
-					const val = this.value.toLowerCase();
-					listDiv.innerHTML = "";
-					if (!val) return;
+// 🔹 Autocomplete logic
+regInput.addEventListener("input", function () {
+	const val = this.value.toLowerCase();
+	listDiv.innerHTML = "";
+	if (!val) return;
 
-					candidates.forEach(c => {
-						const display = `${c.regno} - ${c.fullname}`;
-						if (c.regno.startsWith(val) || c.fullname.toLowerCase().includes(val)) {
-							const item = document.createElement("div");
-							item.textContent = display;
-							item.addEventListener("click", function () {
-								regInput.value = c.regno; // set input as regno only
-								listDiv.innerHTML = "";
-							});
-							listDiv.appendChild(item);
-						}
-					});
-				});
+	candidates.forEach(c => {
+		const display = `${c.regno} - ${c.fullname}`;
+		// ✅ match anywhere in regno OR fullname
+		if (c.regno.toLowerCase().includes(val) || c.fullname.toLowerCase().includes(val)) {
+			const item = document.createElement("div");
+			item.textContent = display;
+			item.addEventListener("click", function () {
+				regInput.value = c.regno; // set input as regno only
+				listDiv.innerHTML = "";
+			});
+			listDiv.appendChild(item);
+		}
+	});
+});
 
 				document.addEventListener("click", function (e) {
 					if (e.target !== regInput) listDiv.innerHTML = "";
