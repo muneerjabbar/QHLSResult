@@ -558,7 +558,7 @@ async function downloadCertificate() {
 
 
 	const certDiv = document.getElementById("certificate");
-	//certDiv.style.display = "block";
+	certDiv.style.display = "block";
 
 	// generate image
 	const canvas = await html2canvas(certDiv);
