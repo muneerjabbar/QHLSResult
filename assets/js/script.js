@@ -557,7 +557,7 @@ async function downloadCertificate() {
 		`If you are a professional, ISM offers a special program designed for you whole day on <b>October 12th</b> at Capkon city convention centre Calicut - Register @ <a href="https://www.isminspire.com/profexel/register/" target="_blank">www.isminspire.com/profexel/register</a>`;
 
 	const certDiv = document.getElementById("certificate");
-	certDiv.style.display = "block";
+	//certDiv.style.display = "block";
 
 	// generate image
 	const canvas = await html2canvas(certDiv);
