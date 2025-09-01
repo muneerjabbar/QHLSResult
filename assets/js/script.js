@@ -548,13 +548,14 @@ async function downloadCertificate() {
 	document.getElementById("mark").textContent = candidate.mark;
 	document.getElementById("regno").textContent = candidate.regno;
 
-	// Show result message
+// Show result message
 	document.getElementById("resultMessage").innerHTML =
-		`You scored <b>${candidate.mark}</b> in QHLS final exam. <br/> Your certificate is auto downloaded in <b>Downloads</b> folder. <br/>If you want to download again click on <b>"Download Again"</b> button.<br/>`;
+		`You scored <b>${candidate.mark}</b> in QHLS final exam. <br/> Your certificate is auto downloaded and can find it in your <b>Downloads</b> folder. <br/>If you want to download again click on <b>"Download Again"</b> button. <br/> Jazakumullah khair. <br/>`;
 
 	// Show special program message
 	document.getElementById("specialMessage").innerHTML =
-		`<br/>If you are a professional, ISM offers a special program designed for you whole day on <b>October 12th</b> at Capkon city convention centre, Calicut - Register for <b>Profexel</b> @ <a href="https://www.isminspire.com/profexel/register/" target="_blank">www.isminspire.com/profexel/register</a>`;
+		`If you are a professional, ISM offers a special program designed for you whole day on <b>October 12th</b> at Capkon city convention centre Calicut - Register @ <a href="https://www.isminspire.com/profexel/register/" target="_blank">www.isminspire.com/profexel/register</a>`;
+
 
 	const certDiv = document.getElementById("certificate");
 	//certDiv.style.display = "block";
