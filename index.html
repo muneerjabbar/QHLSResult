@@ -18,11 +18,12 @@
 
 		#certificate {
 			position: relative;
-			width: 1000px;
-			height: 700px;
+  width: 100%;              /* take full width on mobile */
+  max-width: 1000px;        /* limit to original size on desktop */
+  aspect-ratio: 1000 / 700; /* keeps the correct height ratio */
 			margin: 20px auto;
 			background: url('qhlscertificate.png') no-repeat center;
-			background-size: cover;
+background-size: contain; /* fit the image */
 		}
 
 		#fullname {
@@ -59,6 +60,9 @@
 			font-family: "Times New Roman", serif;
 			justify-content: left;
 		}
+
+
+
 
 		/* 🔹 Autocomplete dropdown */
 		.autocomplete-items {
