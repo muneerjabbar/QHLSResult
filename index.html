@@ -103,27 +103,36 @@
 
 		<div id="main"
 			style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding:8px ; overflow: hidden;">
-			
+
 			<div style="position:relative; min-width:250px; max-width:400px; margin-top:40px;">
-				<input type="text" id="regInput" placeholder="Please enter the Register no " style="width:100%; justify-content: left">
+				<input type="text" id="regInput" placeholder="Please enter the Register no "
+					style="width:100%; justify-content: left">
 				<div id="autocomplete-list" class="autocomplete-items"></div>
 			</div>
-			
+
 			<br />
 			<button class="button primary" onclick="downloadCertificate()">Download Certificate</button>
 			<button id="downloadAgain" class="button">Download Again</button>
 
-			<marquee style="margin-top: 80px;"   width="300" scrollamount="5" ><a target="_blank" style="text-decoration: none; text-transform: uppercase; color: #45558d;" href="https://www.isminspire.com/profexel/">Profexel 2.0 | Professionals family conference | 2025 October 12, Sunday at Capkon convention centre, calicut</marquee>
+			<!-- New message containers -->
+			<div id="resultMessage"></div>
+			<div id="specialMessage"></div>
 
 
-			
+			<marquee style="margin-top: 80px;" width="300" scrollamount="5"><a target="_blank"
+					style="text-decoration: none; text-transform: uppercase; color: #45558d;"
+					href="https://www.isminspire.com/profexel/">Profexel 2.0 | Professionals family conference | 2025
+					October 12, Sunday at Capkon convention centre, calicut</marquee>
+
+
+
 
 		</div>
 
 		<!-- Footer -->
 		<footer id="footer"
 			style="position: fixed; left: 50%; top: 50%; transform: translateX(0%) rotate(90deg); z-index: 2; color: #ccc; ">
-			<p class="copyright">&copy;Design by: <a href="https://isminspire.com">ISM Inspire Ernakulam</a>.</p>
+			<p class="copyright">&copy;Design by: <a href="https://isminspire.com">Team Inspire</a>.</p>
 		</footer>
 		<div style="opacity: 0;">
 			<div id="certificate" style="display:none;">
@@ -132,9 +141,9 @@
 				<div id="regno"></div>
 			</div>
 		</div>
-		
 
-			<script src="assets/js/script.js"></script>
+
+		<script src="assets/js/script.js"></script>
 
 	</div>
 
@@ -142,4 +151,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </body>
+
 </html>
