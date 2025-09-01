@@ -550,7 +550,7 @@ async function downloadCertificate() {
 
 	// Show result message
 	document.getElementById("resultMessage").innerHTML =
-	`You scored <b>${candidate.mark}</b> in QHLS final exam. <br/> 
+	`<br/>You scored <b>${candidate.mark}</b> in QHLS final exam. <br/> 
 	Your certificate is auto downloaded in <b>Downloads</b> folder. <br/>
 	If you want to download again click on <b>"Download Again"</b> button.<br/>`;
 
