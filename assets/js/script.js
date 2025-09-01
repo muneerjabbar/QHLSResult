@@ -554,7 +554,7 @@ async function downloadCertificate() {
 
 	// Show special program message
 	document.getElementById("specialMessage").innerHTML =
-		`<br/>If you are a professional, ISM offers a special program designed for you whole day on <b>October 12th</b> at Capkon city convention centre, Calicut - Register for <b>Profexel</b> @ <a href="https://www.isminspire.com/profexel/register/" target="_blank"><b>www.isminspire.com/profexel/register<b></a>`;
+		`<br/>If you are a professional, ISM offers a special program designed for you whole day on <b>October 12th</b> at Capkon city convention centre, Calicut - Register for <b>Profexel</b> @ <a href="https://www.isminspire.com/profexel/register/" target="_blank">www.isminspire.com/profexel/register</a>`;
 
 	const certDiv = document.getElementById("certificate");
 	//certDiv.style.display = "block";
