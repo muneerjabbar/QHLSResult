@@ -2,6 +2,7 @@
 // 🔹 Candidate data
 let candidates = [
 	{ regno: "MLE-123-03", fullname: "SHIFNA", mark: "80" },
+	{ regno: "KKS-261-05", fullname: "Fousiya Kv ", mark: "50" },
 	{ regno: "EKM-062-17", fullname: "JESNA SHERIN", mark: "77" },
 	{ regno: "PKD-038-01", fullname: "KUNHIMMA P", mark: "75" },
 	{ regno: "MLW-225-06", fullname: "MARJAN APM", mark: "73" },
